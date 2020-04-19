@@ -148,6 +148,43 @@ function data(){
     return "Время: ".hour($hour)." ".minut($min);    
     
 };
+
 echo data();
+echo"<br>";
+
+//Вариант с регулярными выражениями
+function data2(){
+    $hour = date("G");
+    $min = date("i");
+    
+    
+    function hour1($hour) {
+        if(preg_match("/^2?1$/", $hour)) {
+            return $hour."час";
+        }
+        elseif(preg_match("/^2?[2-3]$/s", $hour)) {
+            return $hour."часа";
+        }
+        else {
+            return $hour."часов";
+        }
+    };
+    
+    function minut1($min) {
+        if(preg_match("/^[2-5]?1$/", $min)) {
+            return $min."минута";
+        }
+        elseif(preg_match("/^[2-5]?[2-4]$/s", $min)) {
+            return $min."минуты";
+        }
+        else {
+            return $min."минут";
+        }
+    };
+    
+    return "Время: ".hour1($hour)." ".minut1($min);    
+    
+};
+echo data2();
 
 ?>
