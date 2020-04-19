@@ -134,7 +134,7 @@ function data(){
     };
     
     function minut($min) {
-        if($min==0|| $min>4&&$min<21 || $min>24&&$min<31 || $min>34&&$min<41 || $min>44&&$min<51 || $min>4) {
+        if($min==0|| $min>4&&$min<21 || $min>24&&$min<31 || $min>34&&$min<41 || $min>44&&$min<51 || $min>54) {
             return $min."минут";
         }
         elseif($min==1|| $min==21 || $min==31 || $min==41 || $min==51) {
