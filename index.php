@@ -123,17 +123,18 @@ for ($i=0; $i<10; print $i++){};//echo (в отличие от других яз
 echo "<hr>";
 echo "<h4>Задание 8</h4>";
 //8. *Повторить третье задание, но вывести на экран только города, начинающиеся с буквы «К».
-
-foreach($cities as $obl => $properties){
-    echo "<b>$obl:</b><br>";
-    foreach($properties as $gorod) {
-        if(mb_substr($gorod,0,1)=='К'){
+function cities($arr, $letter){
+    foreach($arr as $obl => $properties){
+        echo "<b>$obl:</b><br>";
+        foreach($properties as $gorod) {
+            if(mb_substr($gorod,0,1)==$letter){
             echo $gorod.="<br> ";
-        }        
-    }
+            }        
+        }
     echo"<br><br>";
+    }
 };
-
+echo cities($cities, 'К');
 echo "<hr>";
 echo "<h4>Задание 9</h4>";
 //9. *Объединить две ранее написанные функции в одну, которая получает строку на русском языке, производит транслитерацию и замену пробелов на подчеркивания (аналогичная задача решается при конструировании url-адресов на основе названия статьи в блогах).
