@@ -61,9 +61,10 @@ $cities = ["Московская область"=>[
 //print_r($cities);
 foreach($cities as $obl => $properties){
     echo "<b>$obl:</b><br>";
-    foreach($properties as $gorod){
-        echo "$gorod; ";
-    }
+    echo implode(", ", $properties);
+//    foreach($properties as $gorod){
+//        echo "$gorod; ";
+//    }
     echo"<br><br>";
 };
 
