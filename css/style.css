@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-#imagelightbox {
+#imageLightbox{
     position: fixed;
     z-index: 9999;
 
@@ -30,4 +30,8 @@ img:hover {
     justify-content: space-around;
     margin: 0 auto;
     border: 1px solid #556B2F;
+}
+.oko {
+    background: url(../images/oko.png) no-repeat left center;
+    padding-left: 35px;
 }
