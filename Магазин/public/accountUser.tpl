@@ -1,31 +1,10 @@
-<script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
-<script>
-
-    function auth() {
-        let login = $("#login").val();
-        let pass = $("#pass").val();
-        let str = "login="+login+"&pass="+pass;
-        $.ajax({
-            type: "post",
-            url: "server.php",
-            data: str,
-            success: function (answer) {
-                $("h1").html(answer);
-            }
-        });
-    }
-
-</script>
-
-
-
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gallery</title>
+    <title>Account: {title}</title> 
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="font/poppins/poppins.css">
@@ -35,9 +14,6 @@
 
 <body class="bgcolor">
     <div id="app" class="color">
-        <div class="auth">
-            <?php include "auth.php"?>
-        </div>
         <header>
             <div class="margin_header_center">
                 <a href="#" class="logo_link">
@@ -60,12 +36,7 @@
             </ul>
         </nav>
         <div class="menu-line"></div>
-        <div class="catalog_gallery">
-            <h1>Our Gallery</h1>
-            <div class="products">
-                <?php include "content.php"?>
-            </div>
-        </div>
+        {content}
         <div class="reviews"></div>
         <footer class="footer_catalog">
             <h4>© 2017 Historical Games. All rights reserved | Design by <a href="#">W3layouts</a></h4>

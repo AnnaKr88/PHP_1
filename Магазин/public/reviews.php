@@ -48,7 +48,7 @@ include "server.php";
                 <input type="email" placeholder="Email" name="email">
                 <input type="text" placeholder="Topic" name="topic">
                 <textarea name="content"></textarea>
-                <input type="submit" name="sub">
+                <input type="submit" name="sub" onclick="a()">
             </form>
         </div>
         <footer class="footer_catalog">
