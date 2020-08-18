@@ -1,0 +1,1 @@
+<h4>© 2017 Historical Games. All rights reserved | Design by <a href="#">W3layouts</a></h4>
